@@ -45,7 +45,7 @@ class CheckModuleResourceConflictPlugin implements Plugin<Project> {
                         file -> mResourceConflict.traverseResources(file)
                     }
 
-                    String resultFile = mResourceConflict.disposeConflictResource(project.buildDir, variant.name)
+                    String resultFile = mResourceConflict.disposeConflictResource(project.rootDir, variant.name)
 
                     long cost = System.currentTimeMillis() - startTime
 

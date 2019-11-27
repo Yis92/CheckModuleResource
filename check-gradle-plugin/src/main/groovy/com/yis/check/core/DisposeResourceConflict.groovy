@@ -179,7 +179,7 @@ class DisposeResourceConflict implements IResourceConflict {
      */
     private File copyHtmlTemplateToBuildDir(File buildDir, String variantName) {
         File resultHtmlFile = new File(
-                buildDir.path + "/" + "outputs" + "/" + "resource_check_result" + "/" + variantName + "_index.html")
+                buildDir.path + "/" + "outputs" + "/" + variantName + "_index.html")
         InputStream inputStream = this.getClass().
                 getResourceAsStream("/templates/check_resource_conflict_result.html")
         FileUtils.copyInputStreamToFile(inputStream, resultHtmlFile)
@@ -220,7 +220,7 @@ class DisposeResourceConflict implements IResourceConflict {
             List<OutputResourceDetail> outputResourceDetailList = new ArrayList<>()
 
             for (BaseResource value : valueList) {
-                String  uniqueId = value.getUniqueId()
+                String uniqueId = value.getUniqueId()
                 OutputResourceDetail outputResourceDetail = new OutputResourceDetail()
                 def resource
                 if (value.isValueType()) {

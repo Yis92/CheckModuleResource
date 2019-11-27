@@ -13,5 +13,5 @@ interface IResourceConflict {
      * @param project
      * @return
      */
-    String disposeConflictResource(File project,String variantName)
+    String disposeConflictResource(File file,String variantName)
 }

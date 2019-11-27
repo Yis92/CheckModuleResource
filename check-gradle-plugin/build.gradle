@@ -36,7 +36,7 @@ publish {
     userOrg = 'sunny92' // bintray.com 该网站你的用户名
     groupId = 'com.yis' // jcenter 上的路径
     artifactId = 'ModuleResource' //项目名称 package
-    publishVersion = '2.0.8' //版本号
+    publishVersion = '2.0.13' //版本号
     desc = 'An Android Gradle Plugin For Checking Conflict Resources'
     website = 'https://github.com/Yis92/CheckResourceConflict'
 }
