@@ -1,0 +1,2 @@
+include ':app', ':check-gradle-plugin'
+rootProject.name='CheckModuleResource'

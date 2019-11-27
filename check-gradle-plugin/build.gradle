@@ -1,0 +1,42 @@
+apply plugin: 'java-library'
+apply plugin: 'groovy'
+apply plugin: "maven"
+apply plugin: 'com.novoda.bintray-release'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation localGroovy()
+    implementation gradleApi()
+    implementation 'com.android.tools.build:gradle:3.4.2'
+}
+
+sourceSets {
+    main {
+        groovy {
+            srcDir 'src/main/groovy'
+        }
+
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+}
+
+// 将src文件夹中的资源文件同时打包
+processResources {
+    from('src/main/groovy') {
+        include '**/*.html'
+    }
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+publish {
+    userOrg = 'sunny92' // bintray.com 该网站你的用户名
+    groupId = 'com.yis' // jcenter 上的路径
+    artifactId = 'ModuleResource' //项目名称 package
+    publishVersion = '2.0.8' //版本号
+    desc = 'An Android Gradle Plugin For Checking Conflict Resources'
+    website = 'https://github.com/Yis92/CheckResourceConflict'
+}
