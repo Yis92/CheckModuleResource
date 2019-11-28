@@ -12,7 +12,6 @@ import com.yis.check.bean.ValueResource
 import com.yis.check.utils.MD5Util
 import com.yis.check.utils.UrlUtil
 import org.apache.commons.io.FileUtils
-import org.gradle.api.Project
 import org.jdom2.Attribute
 import org.jdom2.Document
 import org.jdom2.Element
